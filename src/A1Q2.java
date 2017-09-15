@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
@@ -15,6 +16,7 @@ import becker.robots.Wall;
  */
 public class A1Q2 {
     private static Direction Direction;
+    private static Thing Newspaper;
 
     /**
      * @param args the command line arguments
@@ -31,14 +33,37 @@ public class A1Q2 {
     new Wall(Ontario, 1, 1, Direction.NORTH);
     new Wall(Ontario, 1, 0, Direction.EAST);
     new Wall(Ontario, 2, 0, Direction.EAST);
-    new Wall(Ontario, 3, 1, Direction.SOUTH);
+    new Wall(Ontario, 2, 1, Direction.SOUTH);
     new Wall(Ontario, 1, 2, Direction.SOUTH);
     new Wall(Ontario, 1, 2, Direction.EAST);
+        //Create Object
+   Newspaper = new Thing (Ontario, 2, 2);
+     
+    // the way the robot is moving
+    bob.move();
+    bob.turnLeft();
+    bob.move();
+    bob.turnLeft();
+    bob.move();
+    bob.pickThing();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.move();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.move();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.move();
+    bob.turnLeft();
+    bob.turnLeft();
+    bob.turnLeft();
     
-     // the way the robot is moving
-    bob.move();
-    bob.move();
-            
+    
+   
+   
         
         
         

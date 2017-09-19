@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignment1;
+
 
 import becker.robots.Direction;
 import becker.robots.Robot;

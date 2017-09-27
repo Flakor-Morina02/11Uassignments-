@@ -27,9 +27,9 @@ public class A1Q4 {
           
            // create a second robot named joe
          Robot joe = new Robot(Ontario, 0, 1, Direction.WEST);
-         
-         //new wall
-         new Wall(Ontario, 0, 0, Direction. EAST);
+    
+           //new wall
+         new Wall(Ontario, 0, 0, Direction.EAST);
          new Wall(Ontario, 1, 0, Direction.EAST);
          new Wall(Ontario, 1, 1, Direction.SOUTH);
          

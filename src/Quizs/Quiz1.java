@@ -56,34 +56,29 @@ public class Quiz1 {
                 bob.pickThing();
                 bob.turnLeft();
                 bob.turnLeft();
-            //Once the robot has the object he puts it backs to where it started and repeats the path
+                //Once the robot has the object he puts it backs to where it started and repeats the path
                 while (bob.frontIsClear()) {
-                bob.move();
+                    bob.move();
                 }
                 bob.putThing();
                 bob.turnLeft();
                 bob.turnLeft();
             }
         }
-          if(!bob.frontIsClear()&& !bob.canPickThing()) {
-                bob.turnLeft();
-                bob.turnLeft();
-          while (bob.frontIsClear());{
+        //once the robot has picked up all the objects it returns back to where it started
+        if (!bob.frontIsClear() && !bob.canPickThing()) {
+            bob.turnLeft();
+            bob.turnLeft();
             bob.move();
-            }
-            bob.turnLeft();
-            bob.turnLeft();
-          
-          }
-          }
-                        }
-              
-                
-              
-        
-    
+            bob.move();
+            bob.move();
+            bob.move();
+            bob.move();
+            bob.move();
 
 
-    
 
 
+        }
+    }
+}

@@ -25,6 +25,7 @@ public class Quiz1 {
         //new city called Ontario
         City Ontario = new City();
 
+
         // create a robot facing East
         Robot bob = new Robot(Ontario, 1, 0, Direction.EAST);
 
@@ -51,15 +52,14 @@ public class Quiz1 {
         //if the front is clear bob and move 
         while (bob.frontIsClear()) {
             bob.move();
-            //when bob is at the object he picks it up and turns 
-            if (bob.canPickThing()) {
+            //when bob is at the object he picks it up and turns towards the direction he started
+            if (bob.canPickThing() && bob.getAvenue() != 0) {
                 bob.pickThing();
                 bob.turnLeft();
                 bob.turnLeft();
-                //Once the robot has the object he puts it backs to where it started and repeats the path
-                while (bob.frontIsClear()) {
-                    bob.move();
-                }
+            }
+            //if there isnt any objects the robot is carying it drops it and turns towards the mine
+            if (bob.getAvenue() == 0) {
                 bob.putThing();
                 bob.turnLeft();
                 bob.turnLeft();
@@ -69,16 +69,14 @@ public class Quiz1 {
         if (!bob.frontIsClear() && !bob.canPickThing()) {
             bob.turnLeft();
             bob.turnLeft();
-            bob.move();
-            bob.move();
-            bob.move();
-            bob.move();
-            bob.move();
-            bob.move();
-
-
-
-
+            //once the robot reaches where it started it turns the direction of the mine
+            while (bob.frontIsClear()) {
+                bob.move();
+            }
         }
+        bob.turnLeft();
+        bob.turnLeft();
+
+
     }
 }

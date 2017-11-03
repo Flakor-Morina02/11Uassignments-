@@ -22,6 +22,7 @@ public class UbbiDubbiassignment {
 
         while (x < 1) {
 
+             // a new scanneer to get the word needed
             System.out.print("Please enter the word you would like to be translated: ");
 
             Scanner words = new Scanner(System.in);
@@ -30,7 +31,9 @@ public class UbbiDubbiassignment {
 
             String ex = "Exit";
 
-
+         
+           //easy wat to exit the system 
+         
             if (word.equals(ex)) {
 
                 System.out.print("goodbye");
@@ -39,14 +42,15 @@ public class UbbiDubbiassignment {
 
 
             }
-
+           
+             //looking for a vowel at spot 1
             String translate = "";
 
             Boolean foundvowel = false;
 
             for (int i = 0; i < word.length(); i++) {
 
-
+                      
                 if ((word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u') && foundvowel == false) {
 
                     translate = translate + "ub";
@@ -57,10 +61,12 @@ public class UbbiDubbiassignment {
 
 
                 } else {
-
+ 
+                       //find the first vowel needed
                     if ((word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u') && foundvowel == true) {
                         translate = translate + word.charAt(i);
 
+                        //double vowels
                     } else {
                         translate = translate + word.charAt(i);
                         foundvowel = false;
@@ -68,17 +74,11 @@ public class UbbiDubbiassignment {
                 }
 
             }
-
-
+              //final message    
             System.out.print(translate);
             x = x + 1;
 
 
         }
-
-
-
-
-
     }
 }

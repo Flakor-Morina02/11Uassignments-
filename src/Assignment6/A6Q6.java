@@ -23,7 +23,7 @@ public class A6Q6 {
         System.out.println("How many students are in the class");
 
         int students = input.nextInt();
-        
+
         System.out.println("Input the students" + students + "marks");
 
         int[] currency = new int[students];

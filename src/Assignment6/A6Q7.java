@@ -17,14 +17,28 @@ public class A6Q7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-  
-    Scanner input = new Scanner(System.in);      
-  
-    int[] temp = new int[i];    
-    
-    
-    
-    System.out.println("The prime numbers are");
-    
+        //scanner
+        Scanner input = new Scanner(System.in);
+        //first variable        
+        int[] currency = new int[1001];
+
+        for (int f = 0; f < currency.length; f++) {
+            currency[f] = f;
+        }
+        //figuring out the prime numbers and outputting them
+        System.out.println("The prime numbers are ");
+        for (int c = 2; c < currency.length; c++) {
+            if (currency[c] != 0) {
+                //second variable 
+                int primenumbers = currency[c];
+
+                for (int i = 2; i * primenumbers < currency.length; i++) {
+                    currency[i * primenumbers] = 0;
+                }
+                System.out.println(currency[c]);
+
+            }
+        }
+
     }
 }

@@ -54,8 +54,9 @@ public class UNKNOWN extends JComponent {
     boolean biker2Down = false;
     boolean biker2Right = false;
     boolean biker2Left = false;
-    
-    
+   
+    int biker1score = 0;
+    int biker2score = 0;        
     int gameSpeed= 1;
     Font biggerfont = new Font("arial", Font.BOLD, 42);  
   
@@ -110,6 +111,9 @@ public class UNKNOWN extends JComponent {
         g.fillRect(biker2.x, biker2.y, biker2.width, biker2.height);
         g.setColor(Color.BLACK);
         g.setFont(biggerfont);
+        g.drawString("" + biker1score, WIDTH/2 - 150, 50);
+        g.drawString("" + biker2score, WIDTH/2 + 150, 50);
+      
         if (biker1.y >= HEIGHT - 40 || biker1.y <= 15 || biker1.x >= WIDTH - 40 || biker1.x <= 15) {
             g.clearRect(0, 0, WIDTH, HEIGHT);
             g.drawString("Game Over, P2 WINS!", WIDTH/ 2 - 200, HEIGHT / 2);
@@ -117,11 +121,13 @@ public class UNKNOWN extends JComponent {
          if (biker2.y >= HEIGHT - 40 || biker2.y <= 15 || biker2.x >= WIDTH - 40 || biker2.x <= 15) {
             g.clearRect(0, 0, WIDTH, HEIGHT);
             g.drawString("Game Over P1 WINS!", WIDTH/ 2 - 200, HEIGHT / 2);
+         }
+         
             
-        // GAME DRAWING ENDS HERE
+        // GAME DRAWING ENDS HERE 
+          
     }
-    }
-
+               
     // This method is used to do any pre-setup you might need to do
     // This is run before the game loop begins!
     public void  preSetup(){

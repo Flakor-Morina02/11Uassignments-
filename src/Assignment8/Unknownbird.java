@@ -226,6 +226,10 @@ public class Unknownbird extends JComponent {
                     if (bird.intersects(Column[i])) {
                         gameOver = true;
                         gamestart = false;
+                        jump = false;
+                        ColumnSpeed = 0;
+                        
+                        
                     }
 
                 }
@@ -241,13 +245,15 @@ public class Unknownbird extends JComponent {
                     score = score + 1;
                 }
                 //once score reaches 100 it goes up by 
-                if (score >= 200) {
+                if (score >= 100) {
                     ColumnSpeed = 5;
                 }
                 //if bird hits ground game over
                 if (bird.intersects(ground)) {
                     gameOver = true;
                     gamestart = false;
+                    jump = false;
+                    ColumnSpeed = 0;
                 }
                 // bird jumping abilty
                 if (jump) {
